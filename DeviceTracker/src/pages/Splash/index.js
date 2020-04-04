@@ -1,10 +1,17 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { View, Image } from 'react-native';
 
-const Splash = () => {
+import styles from './style'
+
+const Splash = ({ navigation }) => {
+    React.useEffect(() => {
+        setTimeout(() => {
+            navigation.navigate('Landing');
+        }, 2000);
+    })
     return(
-        <View style={{flex: 1}}>
-            <Text>Splash</Text>
+        <View style={styles.container}>
+            <Image source={require('../../assets/images/Splash/splashScreen.png')} style={styles.imgLogo} />
         </View>
     )
 }
