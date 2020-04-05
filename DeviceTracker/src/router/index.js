@@ -1,17 +1,12 @@
-import * as React from 'react';
-import { View, Text } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
-
-import { 
-  Splash,
-  Landing
-} from '../pages'
+import * as React from 'react';
+import { Landing, Splash } from '../pages';
 
 const Stack = createStackNavigator();
 
 const Router = () => {
   return (
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName="Splash">
         <Stack.Screen 
             name="Splash" 
             component={Splash}

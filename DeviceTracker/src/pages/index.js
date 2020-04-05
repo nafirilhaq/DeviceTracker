@@ -3,5 +3,5 @@ import Landing from './Landing';
 
 export { 
     Splash,
-    Landing
+    Landing,
  };
